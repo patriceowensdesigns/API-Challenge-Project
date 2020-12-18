@@ -1,11 +1,15 @@
 let baseUrl = "https://picsum.photos/200/300";
-let randomImage = document.querySelector('.random-image');
+const randomImage = document.querySelector('.random-image');
 
-fetch('baseUrl')
+function fetchResults(e){
+fetch(baseUrl)
 .then(function(result){
-    return result.json();
-})
-.then(function(json){
-    displayResults(json);
-})
+    console.log(result);
+    displayResults(result);
 
+})
+}
+function displayResults(result){
+    let img = document.querySelector('img');
+    img.src = result.url;
+}
