@@ -9,4 +9,6 @@ body {
 
 button{
     padding: 3px;
+    border: 2px solid black;
+    font-family: cursive
 }
